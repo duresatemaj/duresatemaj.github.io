@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Publications — D. Temaj</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600&family=Inter:wght@400;450;500&display=swap" rel="stylesheet" />
+
+  <style>
+    /* =========================================================
+       COLORS — keep these identical to index.html so the pages match.
+       ========================================================= */
+    :root {
+      --bg:        #FCFBF9;
+      --surface:   #F4F2EC;
+      --ink:       #1A1B1E;
+      --muted:     #6C6F76;
+      --border:    rgba(0,0,0,0.09);
+      --accent:    #E08A12;
+      --accent-2:  #B56807;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg:#131417; --surface:#1D1F24; --ink:#ECEAE4; --muted:#9A9DA5;
+        --border:rgba(255,255,255,0.10); --accent:#F0A63A; --accent-2:#F2B558;
+      }
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background-color: var(--bg);
+      background-image: url('sun_earth.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      color: var(--ink);
+      font-size: 16px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 1.5rem 3rem;
+      background: var(--bg);                    /* solid box; image shows in the margins */
+      min-height: 100vh;
+      box-shadow: 0 0 40px rgba(0,0,0,0.15);
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* ---------- Navigation (same on every page) ---------- */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.6rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-name { font-family: 'Spectral', serif; font-size: 18px; font-weight: 600; letter-spacing: -0.01em; }
+    .nav-links { display: flex; gap: 1.75rem; list-style: none; }
+    .nav-links a { font-size: 14px; color: var(--muted); position: relative; padding-bottom: 2px; }
+    .nav-links a:hover { color: var(--ink); }
+    .nav-links a.active { color: var(--ink); }
+    .nav-links a.active::after {
+      content: ""; position: absolute; left: 0; right: 0; bottom: -3px;
+      height: 2px; background: var(--accent); border-radius: 2px;
+    }
+
+    /* ---------- Page head ---------- */
+    .page-head { padding: 3.5rem 0 2rem; }
+    .page-head h1 { font-family: 'Spectral', serif; font-size: 40px; font-weight: 600; letter-spacing: -0.02em; margin-bottom: 0.5rem; }
+    .page-head p { font-size: 15px; color: var(--muted); }
+
+    /* ---------- Publication list ---------- */
+    .pub-list { display: flex; flex-direction: column; gap: 14px; }
+    .pub-card {
+      display: block;
+      background: var(--surface);
+      border: 1px solid transparent;
+      border-radius: 14px;
+      padding: 1.3rem 1.5rem;
+      transition: border-color 0.15s, transform 0.15s;
+    }
+    .pub-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .pub-year {
+      font-size: 12px; font-weight: 500; letter-spacing: 0.06em;
+      text-transform: uppercase; color: var(--accent-2); margin-bottom: 0.4rem;
+    }
+    .pub-title { font-family: 'Spectral', serif; font-size: 19px; font-weight: 500; line-height: 1.35; margin-bottom: 0.5rem; }
+    .pub-title .arrow { color: var(--accent-2); }
+    .pub-authors { font-size: 14px; color: var(--muted); }
+    .pub-authors b { color: var(--ink); font-weight: 500; }
+
+    footer { padding: 2.5rem 0 0; font-size: 12.5px; color: var(--muted); text-align: center; border-top: 1px solid var(--border); margin-top: 2.5rem; }
+
+    @media (max-width: 520px) {
+      nav { flex-direction: column; gap: 0.9rem; }
+      .page-head h1 { font-size: 32px; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ===== NAV ===== -->
+  <nav>
+    <a href="index.html" class="nav-name">D. Temaj</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="publications.html" class="active">Publications</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+      <li><a href="cv.pdf">CV</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-head">
+    <h1>Publications</h1>
+    <p>Peer-reviewed work on solar irradiance, magnetic fields, and stellar evolution.</p>
+  </div>
+
+  <div class="pub-list">
+
+    <a class="pub-card" href="https://www.aanda.org/articles/aa/full_html/2026/06/aa59432-26/aa59432-26.html" target="_blank">
+      <div class="pub-year">2026 · Astronomy &amp; Astrophysics Letters</div>
+      <div class="pub-title">Reconstruction of annual solar irradiance over the last three millennia <span class="arrow">&rarr;</span></div>
+      <div class="pub-authors"><b>D. Temaj</b>, N. A. Krivova, S. K. Solanki, I. G. Usoskin &amp; T. Chatzistergos</div>
+    </a>
+
+    <a class="pub-card" href="https://www.aanda.org/articles/aa/full_html/2026/04/aa59041-26/aa59041-26.html" target="_blank">
+      <div class="pub-year">2026 · Astronomy &amp; Astrophysics</div>
+      <div class="pub-title">Solar irradiance reconstruction over the telescopic era using a revised photospheric magnetic field model <span class="arrow">&rarr;</span></div>
+      <div class="pub-authors"><b>D. Temaj</b>, N. A. Krivova, T. Chatzistergos, S. K. Solanki &amp; B. Hofer</div>
+    </a>
+
+    <a class="pub-card" href="https://www.aanda.org/articles/aa/full_html/2024/02/aa47434-23/aa47434-23.html" target="_blank">
+      <div class="pub-year">2024 · Astronomy &amp; Astrophysics</div>
+      <div class="pub-title">Convective-core overshooting and the final fate of massive stars <span class="arrow">&rarr;</span></div>
+      <div class="pub-authors"><b>D. Temaj</b>, F. R. N. Schneider, E. Laplace, D. Wei &amp; Ph. Podsiadlowski</div>
+    </a>
+
+  </div>
+
+  <footer>© 2026 D. Temaj · Max Planck Institute for Solar System Research</footer>
+
+</div>
+</body>
+</html>
